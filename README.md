@@ -7,7 +7,19 @@ and maintainable applications.
 For more about Elixir, installation and documentation,
 [check Elixir's website](https://elixir-lang.org/).
 
-# Build
+## Docker container
+
+Elixir is instaled only over `developer` linux user account. For to use it, execute inside the container:
+
+```
+# su developer
+```
+then:
+```
+$ elixir
+```
+
+## Build
 
 ```
 docker build -t zaioll/elixir:<version> .

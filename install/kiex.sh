@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # install kiex
-curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s 
-chown root:root $HOME/.kiex/scripts/kiex && chmod +x $HOME/.kiex/scripts/kiex
+su ${usuario} -c "curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s" 
 
-echo 'test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"' >> "${HOME}/.bashrc"
+su ${usuario} -c "echo 'test -s \"/home/${usuario}/.kiex/scripts/kiex\" && source \"/home/${usuario}/.kiex/scripts/kiex\"' >> \"/home/${usuario}/.bashrc\" && chmod +x /home/${usuario}/.kiex/scripts/kiex"
